@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Project</title>
+  
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    #root {
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #000409;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    div {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+    a {
+      color: #6ccae3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+
+    const heading = React.createElement(
+      'h1', 
+      null, 
+      'Learn Web Development'
+    );
+
+
+    const firstDiv = React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'p',
+        null,
+        'Welcome to MDN learning area this set of article aims to guide complete beginners to web development with all that they need to start coding websites.'
+      )
+    );
+
+    
+    const secondDiv = React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'p',
+        null,
+        'To learn more, visit the official '
+      ),
+      React.createElement(
+        'a',
+        { href: 'https://developer.mozilla.org', target: '_blank' },
+        'MDN Web Docs'
+      )
+    );
+
+    
+    const lastDiv = React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'p',
+        null,
+        'Keep practicing and building projects to solidify your knowledge of web development.'
+      )
+    );
+
+    
+    const container = React.createElement(
+      'div',
+      null,
+      heading,
+      firstDiv,
+      secondDiv,
+      lastDiv
+    );
+
+    
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(container);
+  </script>
+</body>
+</html>
